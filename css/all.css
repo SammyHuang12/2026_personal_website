@@ -1,6 +1,7 @@
 body {
     font-family: "Noto Sans";
     color: var(--neutral-700);
+    letter-spacing: var(--ls-loose);
 }
 
 .material-symbols-outlined {
@@ -19,7 +20,6 @@ body {
 
 .sidebar a {
     line-height: var(--lh-normal);
-    letter-spacing: var(--ls-loose);
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
@@ -35,7 +35,7 @@ body {
     color: var(--neutral);
 }
 
-.list-content {
+.cards {
     max-width: 1076px;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@ body {
 }
 
 .card-img {
-    height: 256px;
+    height: 200px;
 }
 
 .card-img img {
@@ -55,8 +55,40 @@ body {
     font-size: 13px;
 }
 
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.page .active {
+    border-radius: 1000px;
+    background: var(--primary-900);
+    color: var(--neutral);
+}
+
+.page a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* outline: 1px solid green; */
+}
+
+.page a:hover {
+    border-radius: 1000px;
+    background: var(--primary-900);
+    color: var(--neutral);
+}
+
 @media (min-width: 768px) {
     .sidebar {
         width: 180px;
+    }
+
+    .card-img {
+        height: 256px;
     }
 }

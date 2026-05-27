@@ -371,6 +371,21 @@ Margin Utilities (邏輯屬性命名：s = start/左, e = end/右)
    margin-bottom: var(--sp-7);
 }
 
+.my-8 {
+   margin-top: var(--sp-8);
+   margin-bottom: var(--sp-8);
+}
+
+.my-9 {
+   margin-top: var(--sp-9);
+   margin-bottom: var(--sp-9);
+}
+
+.my-10 {
+   margin-top: var(--sp-10);
+   margin-bottom: var(--sp-10);
+}
+
 .mx-auto {
    margin-left: auto;
    margin-right: auto;
@@ -639,6 +654,21 @@ Margin Utilities (邏輯屬性命名：s = start/左, e = end/右)
    .my-sm-7 {
       margin-top: var(--sp-7);
       margin-bottom: var(--sp-7);
+   }
+
+   .my-sm-8 {
+      margin-top: var(--sp-8);
+      margin-bottom: var(--sp-8);
+   }
+
+   .my-sm-9 {
+      margin-top: var(--sp-9);
+      margin-bottom: var(--sp-9);
+   }
+
+   .my-sm-10 {
+      margin-top: var(--sp-10);
+      margin-bottom: var(--sp-10);
    }
 
    .mx-sm-auto {
@@ -913,6 +943,21 @@ Margin Utilities (邏輯屬性命名：s = start/左, e = end/右)
       margin-bottom: var(--sp-7);
    }
 
+   .my-md-8 {
+      margin-top: var(--sp-8);
+      margin-bottom: var(--sp-8);
+   }
+
+   .my-md-9 {
+      margin-top: var(--sp-9);
+      margin-bottom: var(--sp-9);
+   }
+
+   .my-md-10 {
+      margin-top: var(--sp-10);
+      margin-bottom: var(--sp-10);
+   }
+
    .mx-md-auto {
       margin-left: auto;
       margin-right: auto;
@@ -1183,6 +1228,21 @@ Margin Utilities (邏輯屬性命名：s = start/左, e = end/右)
    .my-lg-7 {
       margin-top: var(--sp-7);
       margin-bottom: var(--sp-7);
+   }
+
+   .my-lg-8 {
+      margin-top: var(--sp-8);
+      margin-bottom: var(--sp-8);
+   }
+
+   .my-lg-9 {
+      margin-top: var(--sp-9);
+      margin-bottom: var(--sp-9);
+   }
+
+   .my-lg-10 {
+      margin-top: var(--sp-10);
+      margin-bottom: var(--sp-10);
    }
 
    .mx-lg-auto {
@@ -1457,6 +1517,21 @@ Margin Utilities (邏輯屬性命名：s = start/左, e = end/右)
       margin-bottom: var(--sp-7);
    }
 
+   .my-xl-8 {
+      margin-top: var(--sp-8);
+      margin-bottom: var(--sp-8);
+   }
+
+   .my-xl-9 {
+      margin-top: var(--sp-9);
+      margin-bottom: var(--sp-9);
+   }
+
+   .my-xl-10 {
+      margin-top: var(--sp-10);
+      margin-bottom: var(--sp-10);
+   }
+
    .mx-xl-auto {
       margin-left: auto;
       margin-right: auto;
@@ -1727,6 +1802,21 @@ Margin Utilities (邏輯屬性命名：s = start/左, e = end/右)
    .my-xxl-7 {
       margin-top: var(--sp-7);
       margin-bottom: var(--sp-7);
+   }
+
+   .my-xxl-8 {
+      margin-top: var(--sp-8);
+      margin-bottom: var(--sp-8);
+   }
+
+   .my-xxl-9 {
+      margin-top: var(--sp-9);
+      margin-bottom: var(--sp-9);
+   }
+
+   .my-xxl-10 {
+      margin-top: var(--sp-10);
+      margin-bottom: var(--sp-10);
    }
 
    .mx-xxl-auto {
@@ -4847,6 +4937,425 @@ Align Self
 
 .self-stretch {
    align-self: stretch;
+}
+
+/* =========================================================
+   SM >= 576px
+========================================================= */
+
+@media (min-width: 576px) {
+
+   /* Flex Wrap */
+   .flex-sm-wrap {
+      flex-wrap: wrap;
+   }
+
+   .flex-sm-nowrap {
+      flex-wrap: nowrap;
+   }
+
+   .flex-sm-wrap-reverse {
+      flex-wrap: wrap-reverse;
+   }
+
+   /* Justify Content */
+   .justify-sm-start {
+      justify-content: flex-start;
+   }
+
+   .justify-sm-center {
+      justify-content: center;
+   }
+
+   .justify-sm-end {
+      justify-content: flex-end;
+   }
+
+   .justify-sm-between {
+      justify-content: space-between;
+   }
+
+   .justify-sm-around {
+      justify-content: space-around;
+   }
+
+   .justify-sm-evenly {
+      justify-content: space-evenly;
+   }
+
+   /* Align Items */
+   .align-sm-start {
+      align-items: flex-start;
+   }
+
+   .align-sm-center {
+      align-items: center;
+   }
+
+   .align-sm-end {
+      align-items: flex-end;
+   }
+
+   .align-sm-stretch {
+      align-items: stretch;
+   }
+
+   .align-sm-baseline {
+      align-items: baseline;
+   }
+
+   /* Align Self */
+   .self-sm-start {
+      align-self: flex-start;
+   }
+
+   .self-sm-center {
+      align-self: center;
+   }
+
+   .self-sm-end {
+      align-self: flex-end;
+   }
+
+   .self-sm-stretch {
+      align-self: stretch;
+   }
+}
+
+
+/* =========================================================
+   MD >= 768px
+========================================================= */
+
+@media (min-width: 768px) {
+
+   /* Flex Wrap */
+   .flex-md-wrap {
+      flex-wrap: wrap;
+   }
+
+   .flex-md-nowrap {
+      flex-wrap: nowrap;
+   }
+
+   .flex-md-wrap-reverse {
+      flex-wrap: wrap-reverse;
+   }
+
+   /* Justify Content */
+   .justify-md-start {
+      justify-content: flex-start;
+   }
+
+   .justify-md-center {
+      justify-content: center;
+   }
+
+   .justify-md-end {
+      justify-content: flex-end;
+   }
+
+   .justify-md-between {
+      justify-content: space-between;
+   }
+
+   .justify-md-around {
+      justify-content: space-around;
+   }
+
+   .justify-md-evenly {
+      justify-content: space-evenly;
+   }
+
+   /* Align Items */
+   .align-md-start {
+      align-items: flex-start;
+   }
+
+   .align-md-center {
+      align-items: center;
+   }
+
+   .align-md-end {
+      align-items: flex-end;
+   }
+
+   .align-md-stretch {
+      align-items: stretch;
+   }
+
+   .align-md-baseline {
+      align-items: baseline;
+   }
+
+   /* Align Self */
+   .self-md-start {
+      align-self: flex-start;
+   }
+
+   .self-md-center {
+      align-self: center;
+   }
+
+   .self-md-end {
+      align-self: flex-end;
+   }
+
+   .self-md-stretch {
+      align-self: stretch;
+   }
+}
+
+
+/* =========================================================
+   LG >= 992px
+========================================================= */
+
+@media (min-width: 992px) {
+
+   /* Flex Wrap */
+   .flex-lg-wrap {
+      flex-wrap: wrap;
+   }
+
+   .flex-lg-nowrap {
+      flex-wrap: nowrap;
+   }
+
+   .flex-lg-wrap-reverse {
+      flex-wrap: wrap-reverse;
+   }
+
+   /* Justify Content */
+   .justify-lg-start {
+      justify-content: flex-start;
+   }
+
+   .justify-lg-center {
+      justify-content: center;
+   }
+
+   .justify-lg-end {
+      justify-content: flex-end;
+   }
+
+   .justify-lg-between {
+      justify-content: space-between;
+   }
+
+   .justify-lg-around {
+      justify-content: space-around;
+   }
+
+   .justify-lg-evenly {
+      justify-content: space-evenly;
+   }
+
+   /* Align Items */
+   .align-lg-start {
+      align-items: flex-start;
+   }
+
+   .align-lg-center {
+      align-items: center;
+   }
+
+   .align-lg-end {
+      align-items: flex-end;
+   }
+
+   .align-lg-stretch {
+      align-items: stretch;
+   }
+
+   .align-lg-baseline {
+      align-items: baseline;
+   }
+
+   /* Align Self */
+   .self-lg-start {
+      align-self: flex-start;
+   }
+
+   .self-lg-center {
+      align-self: center;
+   }
+
+   .self-lg-end {
+      align-self: flex-end;
+   }
+
+   .self-lg-stretch {
+      align-self: stretch;
+   }
+}
+
+
+/* =========================================================
+   XL >= 1200px
+========================================================= */
+
+@media (min-width: 1200px) {
+
+   /* Flex Wrap */
+   .flex-xl-wrap {
+      flex-wrap: wrap;
+   }
+
+   .flex-xl-nowrap {
+      flex-wrap: nowrap;
+   }
+
+   .flex-xl-wrap-reverse {
+      flex-wrap: wrap-reverse;
+   }
+
+   /* Justify Content */
+   .justify-xl-start {
+      justify-content: flex-start;
+   }
+
+   .justify-xl-center {
+      justify-content: center;
+   }
+
+   .justify-xl-end {
+      justify-content: flex-end;
+   }
+
+   .justify-xl-between {
+      justify-content: space-between;
+   }
+
+   .justify-xl-around {
+      justify-content: space-around;
+   }
+
+   .justify-xl-evenly {
+      justify-content: space-evenly;
+   }
+
+   /* Align Items */
+   .align-xl-start {
+      align-items: flex-start;
+   }
+
+   .align-xl-center {
+      align-items: center;
+   }
+
+   .align-xl-end {
+      align-items: flex-end;
+   }
+
+   .align-xl-stretch {
+      align-items: stretch;
+   }
+
+   .align-xl-baseline {
+      align-items: baseline;
+   }
+
+   /* Align Self */
+   .self-xl-start {
+      align-self: flex-start;
+   }
+
+   .self-xl-center {
+      align-self: center;
+   }
+
+   .self-xl-end {
+      align-self: flex-end;
+   }
+
+   .self-xl-stretch {
+      align-self: stretch;
+   }
+}
+
+
+/* =========================================================
+   XXL >= 1400px
+========================================================= */
+
+@media (min-width: 1400px) {
+
+   /* Flex Wrap */
+   .flex-xxl-wrap {
+      flex-wrap: wrap;
+   }
+
+   .flex-xxl-nowrap {
+      flex-wrap: nowrap;
+   }
+
+   .flex-xxl-wrap-reverse {
+      flex-wrap: wrap-reverse;
+   }
+
+   /* Justify Content */
+   .justify-xxl-start {
+      justify-content: flex-start;
+   }
+
+   .justify-xxl-center {
+      justify-content: center;
+   }
+
+   .justify-xxl-end {
+      justify-content: flex-end;
+   }
+
+   .justify-xxl-between {
+      justify-content: space-between;
+   }
+
+   .justify-xxl-around {
+      justify-content: space-around;
+   }
+
+   .justify-xxl-evenly {
+      justify-content: space-evenly;
+   }
+
+   /* Align Items */
+   .align-xxl-start {
+      align-items: flex-start;
+   }
+
+   .align-xxl-center {
+      align-items: center;
+   }
+
+   .align-xxl-end {
+      align-items: flex-end;
+   }
+
+   .align-xxl-stretch {
+      align-items: stretch;
+   }
+
+   .align-xxl-baseline {
+      align-items: baseline;
+   }
+
+   /* Align Self */
+   .self-xxl-start {
+      align-self: flex-start;
+   }
+
+   .self-xxl-center {
+      align-self: center;
+   }
+
+   .self-xxl-end {
+      align-self: flex-end;
+   }
+
+   .self-xxl-stretch {
+      align-self: stretch;
+   }
 }
 
 /* ----------------------------------------
