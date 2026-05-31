@@ -90,6 +90,7 @@ video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	line-height: inherit;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -151,4 +152,19 @@ a {
 	word-break: break-all;
 	color: black;
 	display: inline-block;
+}
+
+/* 主動點名表單元件，強制它們回頭繼承 body 的一切 */
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	/* 繼承 body 的 "Noto Sans" */
+	font-size: inherit;
+	/* 繼承父層的字體大小 */
+	letter-spacing: inherit;
+	/* 繼承 body 的字距 */
+
+	line-height: 1.5;
 }

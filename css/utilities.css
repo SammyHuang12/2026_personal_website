@@ -45,26 +45,32 @@ Root Variables
 
    /* border radius */
    --radius-sm: calc(var(--spacer) * 0.25);
-   --radius-md: calc(var(--spacer) * 0.5);
+   --radius-md: calc(var(--spacer) * 2.5);
    --radius-lg: calc(var(--spacer) * 0.75);
 
    /* colors */
-   /* --primary: #0d6efd;
-   --success: #198754;
-   --danger: #dc3545;
-   --warning: #ffc107;
-   --dark: #212529;
-   --light: #f8f9fa;
-   --muted: #6c757d; */
    --primary-50: #FDF7F1;
    --primary-100: #FDE6CF;
    --primary-500: #F5B87B;
    --primary-900: #24140B;
 
+   --primary: var(--primary-50);
+   --success: #198754;
+   --danger: #dc3545;
+   --warning: #ffc107;
+   --dark: #212529;
+   --light: #f8f9fa;
+   --muted: #6c757d;
+
    --neutral: #fff;
    --neutral-500: #737373;
    --neutral-700: #404040;
    --neutral-900: #1E1E1E;
+
+   --dark-rgb: 0, 0, 0;
+
+   --opacity-40: 0.4;
+   --opacity-60: 0.6;
 
    /* font sizes */
    --fs-1: 2.5rem;
@@ -4483,7 +4489,7 @@ Border Color Utilities
 }
 
 .border-light {
-   border-color: var(--light);
+   border-color: var(--neutral);
 }
 
 .border-muted {
@@ -6083,7 +6089,9 @@ h6,
    margin-bottom: var(--sp-3);
    font-weight: 700;
    line-height: var(--lh-normal);
+   /*150%*/
    letter-spacing: var(--ls-loose);
+   /*2%*/
    color: inherit;
 }
 
@@ -6122,14 +6130,14 @@ Display Headings
 ======================================== */
 
 .display-1 {
-   font-size: calc(var(--fs-1) * 1.4);
-   font-weight: 300;
-   line-height: 1.1;
+   font-size: calc(var(--fs-1) * 7.5);
+   font-weight: 700;
+   line-height: 1.2;
 }
 
 .display-2 {
-   font-size: calc(var(--fs-1) * 1.2);
-   font-weight: 300;
+   font-size: calc(var(--fs-1) * 4);
+   font-weight: 700;
    line-height: 1.1;
 }
 
@@ -6156,6 +6164,27 @@ Display Headings
    font-weight: 300;
    line-height: 1.3;
 }
+
+/* ========================================
+Headings
+======================================== */
+
+.h-xxx-large,
+.h-xx-large {
+   font-weight: 700;
+   line-height: 1.2;
+}
+
+.h-xxx-large {
+   font-size: calc(var(--fs-1) * 2);
+}
+
+.h-xx-large {
+   font-size: calc(var(--fs-1) * 1.2);
+}
+
+
+
 
 /* ========================================
 Lead paragraph
