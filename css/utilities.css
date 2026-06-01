@@ -405,6 +405,14 @@ Margin Utilities (邏輯屬性命名：s = start/左, e = end/右)
    margin-left: auto;
 }
 
+.mt-auto {
+   margin-top: auto;
+}
+
+.mb-auto {
+   margin-bottom: auto !important;
+}
+
 /* =========================================================
    SM >= 576px
 ========================================================= */
@@ -2343,6 +2351,21 @@ Padding Utilities (s = start/左, e = end/右)
    .py-sm-7 {
       padding-top: var(--sp-7);
       padding-bottom: var(--sp-7);
+   }
+
+   .py-sm-8 {
+      padding-top: var(--sp-8);
+      padding-bottom: var(--sp-8);
+   }
+
+   .py-sm-9 {
+      padding-top: var(--sp-9);
+      padding-bottom: var(--sp-9);
+   }
+
+   .py-sm-10 {
+      padding-top: var(--sp-10);
+      padding-bottom: var(--sp-10);
    }
 }
 
@@ -5487,8 +5510,8 @@ Theme Utilities (補全顏色工具類別)
    background-color: var(--primary);
 }
 
-.bg-success {
-   background-color: var(--success);
+.bg-primary-900 {
+   background-color: var(--primary-900);
 }
 
 /* ⭐ 新增 */

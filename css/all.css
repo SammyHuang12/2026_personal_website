@@ -140,7 +140,6 @@ body {
 .btn {
     border: 1px solid var(--neutral);
     background: var(--neutral);
-    ;
     padding: 12px 20px;
     border-radius: 40px;
 }
@@ -152,13 +151,12 @@ body {
     color: #fff;
     padding: 20px 32px;
     border-radius: 40px;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
-    /* line-height: 1.5; */
 }
 
 .from-input::placeholder {
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
     font-weight: 500;
 }
@@ -190,14 +188,14 @@ input:focus {
 }
 
 /* 左邊：佔容器總寬的 40% */
-.sub .container>div:first-child {
+.cus-fields .container>div:first-child {
     max-width: 526px;
     height: 320px;
     flex: 0 0 41.35%;
 }
 
 /* 右邊：自動吃滿剩下的 60%（扣除 gap 24px 後的剩餘空間） */
-.sub .container>div:last-child {
+.cus-fields .container>div:last-child {
     height: 100%;
     max-width: 746px;
     /* flex: 0 0 58.65%; */
@@ -212,6 +210,17 @@ input:focus {
     right: 8px;
 }
 
+.icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 @media (min-width: 375.02px) {
     .card-img {
         flex: 1;
@@ -219,12 +228,26 @@ input:focus {
         height: 100%;
     }
 
-    .sub .container>div:first-child {
+    .cus-fields .container>div:first-child {
         height: 100%;
     }
 
     .sub .container img {
         height: 100%;
+    }
+
+    .from-input {
+        font-size: 16px;
+
+    }
+
+    .from-input::placeholder {
+        font-size: 16px;
+
+    }
+
+    footer .material-symbols-outlined {
+        font-size: var(--fs-4);
     }
 }
 
