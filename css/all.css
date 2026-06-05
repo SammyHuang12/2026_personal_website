@@ -4,6 +4,28 @@ body {
     letter-spacing: var(--ls-loose);
     line-height: var(--lh-normal);
     font-weight: 500;
+    padding-top: 60px;
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, .6);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s;
+
+    z-index: 998;
+}
+
+body.menu-open::before {
+    opacity: 1;
+    visibility: visible;
 }
 
 .material-symbols-outlined {
@@ -16,14 +38,99 @@ body {
 }
 
 .navbar {
-    position: relative;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* position: relative; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding: 8px 0;
 }
+
+.web-logo {
+    background: url("../images/device-mobile.svg") no-repeat center center/cover;
+    width: 112px;
+    height: 32px;
+    /* 圖片取代文字 */
+    display: block;
+    overflow: hidden;
+    text-indent: 110%;
+    white-space: nowrap;
+}
+
+.collapse:not(.show) {
+    display: none;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-3);
+    padding: 20px 0 0 4px;
+}
+
+.nav-link {
+    padding: 4px 12px;
+    font-size: 14px;
+}
+
+.navbar-toggler {
+    padding: 11px;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 1000px;
+    transition: box-shadow .15s ease-in-out;
+    color: var(--neutral-700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler .material-symbols-outlined {
+    font-weight: 200;
+}
+
+.navbar-toggler.show {
+    border: 1px solid var(--neutral-700);
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.collapse {
+    /* display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999; */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .banner img {
     height: 380px;
@@ -142,15 +249,20 @@ body {
     background: var(--neutral);
     padding: 12px 20px;
     border-radius: 40px;
+    transition: background 0.2s;
 }
 
+.btn:hover {
+    background-color: var(--primary);
+}
 
 .from-input {
     border: 1px solid #fff;
     background: unset;
     color: #fff;
-    padding: 20px 32px;
-    border-radius: 40px;
+    /* padding: 20px 32px; */
+    padding: 16px 20px;
+    border-radius: 32px;
     font-size: 14px;
     width: 100%;
 }
@@ -166,20 +278,27 @@ input:focus {
     box-shadow: none;
 }
 
-.sub picture img {
-
-    height: 100%;
-    object-fit: cover;
+.sub {
+    /* min-height: 629px; */
 }
 
-.sub::after {
+.sub-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.sub-bg::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sub-bg img {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    object-fit: cover;
 }
 
 .sub .container {
@@ -188,14 +307,14 @@ input:focus {
 }
 
 /* 左邊：佔容器總寬的 40% */
-.cus-fields .container>div:first-child {
+.sub .container>div:first-child {
     max-width: 526px;
     height: 320px;
-    flex: 0 0 41.35%;
+    /* flex: 0 0 41.35%; */
 }
 
 /* 右邊：自動吃滿剩下的 60%（扣除 gap 24px 後的剩餘空間） */
-.cus-fields .container>div:last-child {
+.sub .container>div:last-child {
     height: 100%;
     max-width: 746px;
     /* flex: 0 0 58.65%; */
@@ -206,20 +325,34 @@ input:focus {
     /* object-fit: cover; */
 }
 
+.sub .from-input {
+    padding: 20px 32px;
+}
+
 .sub .btn {
     right: 8px;
 }
 
 .icon {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.footer .contact {
+    height: 626px;
+}
 
+.footer .from {
+    position: absolute;
+    width: calc(100vw - 30px);
+    top: 22.96%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 @media (min-width: 375.02px) {
     .card-img {
@@ -228,30 +361,26 @@ input:focus {
         height: 100%;
     }
 
-    .cus-fields .container>div:first-child {
-        height: 100%;
-    }
-
     .sub .container img {
         height: 100%;
     }
 
-    .from-input {
-        font-size: 16px;
-
-    }
-
-    .from-input::placeholder {
-        font-size: 16px;
-
-    }
-
-    footer .material-symbols-outlined {
-        font-size: var(--fs-4);
-    }
 }
 
 @media (min-width: 576px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
     .card-img {
         height: 256px;
     }
@@ -269,6 +398,16 @@ input:focus {
         font-size: calc(var(--fs-1) * 1.2);
     }
 
+    .sub {
+        height: 440px;
+        /* min-height: unset; */
+    }
+
+    .sub .container>div:first-child {
+        height: 100%;
+        flex: 0 0 41.35%;
+    }
+
     .sub picture img {
         height: 440px;
     }
@@ -281,19 +420,87 @@ input:focus {
         padding: 12px 24px;
     }
 
+    .footer .contact {
+        height: 392px;
+        flex: 0 0 41.35%;
+    }
+
+    .footer .from {
+        position: unset;
+        width: 100%;
+        top: unset;
+        transform: unset;
+    }
+
+    .from-input {
+        font-size: 16px;
+        padding: 20px 32px;
+        border-radius: 40px;
+    }
+
+    .from-input::placeholder {
+        font-size: 16px;
+    }
+
+    .footer .material-symbols-outlined {
+        font-size: var(--fs-4);
+    }
+
+    .icon {
+        width: 48px;
+        height: 48px;
+    }
+
 }
 
 @media (min-width: 768px) {
-    .sidebar {
-        width: 180px;
+    body {
+        padding-top: 64px;
     }
-}
 
-@media (min-width: 992px) {
+    .web-logo {
+        outline: solid 1px greenyellow;
+        width: 140px;
+        height: 40px;
+
+    }
+
+    .navbar {
+        padding: 12px 0;
+    }
+
     .navbar-expand-lg {
         flex-wrap: nowrap;
         justify-content: flex-start;
     }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .collapse.navbar-collapse {
+        display: flex;
+        flex-basis: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        gap: var(--sp-5);
+        padding: unset;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .sidebar {
+        width: 180px;
+    }
+
+}
+
+@media (min-width: 992px) {
+
 
     .h-xxx-large {
         font-size: calc(var(--fs-1) * 2);

@@ -19,20 +19,17 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-expand-lg bg-primary">
-        <div class="container">
-            <picture>
-                <source srcset="images/device-pc.svg" media="(min-width:576px)">
-                <img src="images/device-mobile.svg">
-            </picture>
+    <nav class="navbar bg-primary">
+        <div class="container d-flex justify-between align-center flex-wrap">
+            <h1 class="ms-sm-2 mb-0"><a class="web-logo" href="index.html">Nelson</a></h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="material-symbols-outlined">menu</span>
+                <span class="material-symbols-outlined">density_medium</span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">服務項目</a>
+                        <a class="nav-link" aria-current="page" href="#">服務項目</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">專案作品</a>
@@ -47,7 +44,7 @@
 
             </div>
         </div>
-    </nav> -->
+    </nav>
     <header class="banner position-relative overflow-hidden">
         <picture>
             <source srcset="images/blog_banner.png" media="(min-width:576px)">
@@ -212,17 +209,17 @@
             </ul>
         </div>
     </section>
-    <section class="cus-fields sub position-relative w-100">
-        <picture>
+    <section class="sub position-relative w-100 h-100">
+        <picture class="sub-bg">
             <source srcset="images/subscription_bg.png" media="(min-width:576px)">
             <img src="images/mobile/subscription_bg.png" class="w-100 h-100">
         </picture>
         <div
-            class="container z-base d-flex flex-column align-center justify-between flex-sm-row gap-sm-5 position-absolute top-50 start-50 translate-middle h-100">
+            class="container z-base d-flex flex-column align-center justify-between flex-sm-row gap-sm-5 position-relative h-100">
             <div class="w-100 h-100">
                 <img src="images/subscription.png" alt="sub-logo" class="w-100 h-100">
             </div>
-            <div class="text-white d-flex flex-column justify-center gap-sm-5 px-3 px-md-7">
+            <div class="text-white d-flex flex-column justify-center gap-sm-5 px-3 px-md-7 my-7">
                 <div class="mb-3 mb-sm-0">
                     <h6 class="fs-sm-7 fs-8 mb-0">電子報訂閱</h6>
                     <h2 class="h-xxx-large text-break  mb-0">SUBSCRIPTION</h2>
@@ -237,19 +234,19 @@
             </div>
         </div>
     </section>
-    <footer class="cus-fields bg-primary-900 py-7 py-sm-10">
-        <div class="container d-flex flex-column justify-between flex-sm-row gap-sm-5">
+    <footer class="footer bg-primary-900 py-7 py-sm-10">
+        <div class="container position-relative d-flex flex-column justify-between flex-sm-row gap-sm-5">
             <div class="contact text-white d-flex flex-column">
                 <div class="mb-auto">
-                    <div class="contact-title">
+                    <div class="mb-3 mb-sm-5">
                         <h6 class="fs-sm-7 fs-8 mb-0">與我聯絡</h6>
                         <h2 class="h-xxx-large text-break mb-0">CONTACT</h2>
                     </div>
-                    <p>若有數位產品設計和開發相關問題</p>
-                    <p>歡迎填寫表單 或 直接與我聯絡！</p>
+                    <p class="fs-sm-7 fs-8 mb-0">若有數位產品設計和開發相關問題</p>
+                    <p class="fs-sm-7 fs-8 mb-0">歡迎填寫表單 或 直接與我聯絡！</p>
                 </div>
 
-                <div class="social">
+                <div class="d-flex flex-column gap-3 gap-sm-5">
                     <ul class="list-unstyled d-flex gap-3 flex-wrap">
                         <li class="d-inline-flex">
                             <a href="#" class="icon border border-white"><i class="bi bi-instagram text-white"></i></a>
@@ -261,19 +258,19 @@
                             <a href="#" class="icon border border-white"><i class="bi bi-linkedin text-white"></i></a>
                         </li>
                     </ul>
-                    <a href="mailto:service@hexschool.com" class="text-white d-flex align-center gap-2">
+                    <a href="mailto:service@hexschool.com" class="text-white d-flex align-center gap-2 fs-8 fs-sm-7">
                         <span class="material-symbols-outlined fs-4">drafts</span>service@hexschool.com</a>
                 </div>
             </div>
 
-            <form class="d-flex flex-column px-md-7 gap-3 gap-sm-5 w-100">
+            <form class="from d-flex flex-column px-md-7 gap-3 gap-sm-5 w-100">
                 <div class="from-row d-flex flex-column flex-md-row justify-between gap-3 gap-sm-5">
                     <input type="text" class="from-input " placeholder="姓名">
                     <input type="text" class="from-input " placeholder="手機號碼">
                 </div>
                 <input type="email" class="from-input" placeholder="電子信箱">
                 <textarea name="remark" id="" cols="30" rows="4" placeholder="備註" class="from-input"></textarea>
-                <button class="btn fs-sm-7">送出</button>
+                <button class="btn fs-8 fs-sm-7">送出</button>
             </form>
 
         </div>
@@ -294,7 +291,8 @@
 
                 // 切換 show class
                 navbarCollapse.classList.toggle("show");
-
+                toggler.classList.toggle("show");
+                document.body.classList.toggle("menu-open");
                 // 更新 aria-expanded
                 const isOpen = navbarCollapse.classList.contains("show");
 
